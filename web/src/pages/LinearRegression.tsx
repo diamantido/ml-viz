@@ -5,11 +5,11 @@ const LinearRegression = () => (
     <h1>Login</h1>
     <p>This is the Linear Regression page of ML-Viz.</p>
 
-    <button>
-      <a href="/">
+    <a href="/">
+      <button>
         <span>Back</span>
-      </a>
-    </button>
+      </button>
+    </a>
   </div>
 );
 
