@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.6
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+        files: ^api/
+      - id: ruff-format
+        files: ^api/
+  - repo: local
+    hooks:
+      - id: npm-lint
+        name: Run npm lint
+        entry: npm run --prefix web lint
+        language: system
+      - id: npm-typecheck
+        name: Run npm typecheck
+        entry: npm run --prefix web typecheck
+        language: system
+      - id: npm-test
+        name: Run npm test
+        entry: npm run --prefix web test
+        language: system
+      - id: npm-prepare
+        name: Run npm prepare
+        entry: npm run --prefix web prepare
+        language: system

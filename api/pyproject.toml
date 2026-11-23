@@ -6,4 +6,39 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.165.0",
+    "mypy>=2.4.1",
+    "ruff>=0.17.6",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Enable Pyflakes (F), pycodestyle (E, W), isort (I), bugbear (B), and pyupgrade (UP)
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = []
+
+# Allow autofix for all enabled rules
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+ignore_missing_imports = true
