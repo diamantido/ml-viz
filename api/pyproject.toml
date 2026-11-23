@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.165.0",
     "mypy>=2.4.1",
+    "pytest>=9.2.0",
     "ruff>=0.17.6",
 ]
 
@@ -42,3 +43,8 @@ docstring-code-format = true
 python_version = "3.13"
 strict = true
 ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
