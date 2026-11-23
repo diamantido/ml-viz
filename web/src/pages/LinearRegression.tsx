@@ -6,7 +6,9 @@ const LinearRegression = () => (
     <p>This is the Linear Regression page of ML-Viz.</p>
 
     <button>
-      <a href="/">Back</a>
+      <a href="/">
+        <span>Back</span>
+      </a>
     </button>
   </div>
 );
