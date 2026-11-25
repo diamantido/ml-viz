@@ -19,7 +19,7 @@ export const XAxis = ({ scale, pixelsPerTick }: AxisProps) => {
       value,
       xOffset: scale(value),
     }));
-  }, [scale]);
+  }, [scale, pixelsPerTick, range]);
 
   return (
     <>
@@ -65,7 +65,7 @@ export const YAxis = ({ scale, pixelsPerTick }: AxisProps) => {
       />
 
       {/* Ticks and labels */}
-      {scale.ticks(numberOfTicksTarget).map((value, i) => (
+      {scale.ticks(numberOfTicksTarget).map((value, _) => (
         <g key={value} transform={`translate(0, ${scale(value)})`}>
           <line x2={-TICK_LENGTH} stroke="currentColor" />
           <text className="tick" key={value}>
