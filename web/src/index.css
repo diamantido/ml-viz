@@ -296,3 +296,45 @@ code {
     border-right-color: var(--border);
   }
 }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+nav {
+  ul {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+  }
+}
+
+.chart-wrapper {
+  border: 1px solid var(--border);
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin: 5px;
+    text {
+      stroke: var(--text);
+      font-size: 10px;
+      text-anchor: middle;
+      transform: translateX(-20px);
+    }
+    .error {
+      stroke: var(--accent-border);
+      stroke-width: 1;
+      stroke-dasharray: "5,5";
+    }
+  }
+}
