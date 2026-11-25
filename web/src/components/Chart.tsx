@@ -36,9 +36,9 @@ const Chart = ({ width, height, data, fit, error }: ChartProps) => {
 
   const fitLine = () => {
     if (fit) {
-      let x1 = 0;
+      const x1 = 0;
       let x2 = 10;
-      let y1 = fit.intercept;
+      const y1 = fit.intercept;
       let y2 = 10 * fit.slope + fit.intercept;
 
       if (y2 < 0) {

@@ -19,7 +19,7 @@ export const XAxis = ({ scale, pixelsPerTick }: AxisProps) => {
       value,
       xOffset: scale(value),
     }));
-  }, [scale]);
+  }, [scale, pixelsPerTick, range]);
 
   return (
     <>

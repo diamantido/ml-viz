@@ -13,15 +13,17 @@ repos:
         name: Run npm lint
         entry: npm run --prefix web lint
         language: system
+        files: ^web/
+        pass_filenames: false
       - id: npm-typecheck
         name: Run npm typecheck
         entry: npm run --prefix web typecheck
         language: system
+        files: ^web/
+        pass_filenames: false
       - id: npm-test
         name: Run npm test
         entry: npm run --prefix web test
         language: system
-      - id: npm-prepare
-        name: Run npm prepare
-        entry: npm run --prefix web prepare
-        language: system
+        files: ^web/
+        pass_filenames: false
