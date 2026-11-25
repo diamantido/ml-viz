@@ -42,7 +42,7 @@ const LinearRegression = () => {
   const calculateError = () => {
     if (data && fit) {
       let total = 0;
-      data.forEach((d, i) => {
+      data.forEach((d, _) => {
         total += Math.abs(d.x * fit.slope + fit.intercept);
       });
       setError(total);
