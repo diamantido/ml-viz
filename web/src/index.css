@@ -334,7 +334,7 @@ nav {
     .error {
       stroke: var(--accent-border);
       stroke-width: 1;
-      stroke-dasharray: "5,5";
+      stroke-dasharray: 5, 5;
     }
   }
 }
